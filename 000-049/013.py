@@ -1,0 +1,1 @@
+print str(reduce(lambda x, y: int(x) + int(y), open('013.txt', 'rt').readlines()))[0:10]
