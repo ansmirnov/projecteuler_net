@@ -8,7 +8,9 @@ PRIMES = set()
 def is_prime(x):
     if x in PRIMES:
         return True
-    if x == 2: return True
+    if x == 2:
+        PRIMES.add(x)
+        return True
     for i in xrange(2, int(math.sqrt(x) + 2)):
         if x % i == 0:
             return False
