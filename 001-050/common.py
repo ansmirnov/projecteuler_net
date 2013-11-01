@@ -16,3 +16,12 @@ def is_prime(x):
     PRIMES.add(x)
     return True
 
+
+def powmod(base, exp, modulo):
+    res = 1
+    while exp != 0:
+        if exp & 1:
+            res = res * base % modulo
+        base = (base * base) % modulo
+        exp >>= 1
+    return res
